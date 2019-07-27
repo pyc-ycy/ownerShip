@@ -1,4 +1,18 @@
 fn main() {
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() 返回字符串的长度
+
+    (s, length)
+}
+
+/*fn main() {
     let s1 = gives_ownership();         // gives_ownership 将返回值
     // 移给 s1
 
@@ -22,7 +36,7 @@ fn gives_ownership() -> String {             // gives_ownership 将返回值移�
 fn takes_and_gives_back(a_string: String) -> String { // a_string 进入作用域
 
     a_string  // 返回 a_string 并移出给调用的函数
-}
+}*/
 
 /*fn main() {
     let s = String::from("hello");  // s 进入作用域
